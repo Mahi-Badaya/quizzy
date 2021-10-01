@@ -165,6 +165,28 @@ public class LearnQuizActivity extends BaseActivity implements View.OnClickListe
         }
     }
 
+    public void onBackPressed() {
+        cancelTimer();
+        ConstantDialog.showExitDialog(this, this);
+    }
+
+    @Override
+    public void onNo() {
+
+    }
+
+    public void backIntent() {
+        cancelTimer();
+        quizModelList.clear();
+        startActivity(new Intent(this, LearnTableActivity.class));
+        overridePendingTransition(0, 0);
+    }
+
+    public void cancelTimer() {
+        if (handler != null) {
+            handler.removeCallbacks(r);
+        }
+    }
 
     @Override
     protected void onPause() {
@@ -211,6 +233,33 @@ public class LearnQuizActivity extends BaseActivity implements View.OnClickListe
         });
 
     }
+
+
+    public void setScore() {
+        tv_wrong_count.setText(getTranslatedString(String.valueOf(wrong_answer_count)));
+        tv_right_count.setText(getTranslatedString(String.valueOf(right_answer_count)));
+    }
+
+    public void setFalseAction() {
+        if (!isCount) {
+            isCount = true;
+            wrong_answer_count++;
+            tv_wrong_count.setText(getTranslatedString(String.valueOf(wrong_answer_count)));
+        }
+        if (Constant.getVibrate(getApplicationContext())) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                vibe.vibrate(VibrationEffect.createOneShot(500, VibrationEffect.DEFAULT_AMPLITUDE));
+            } else {
+                vibe.vibrate(400);
+            }
+        }
+
+        imageView.setVisibility(View.GONE);
+        textView1.setColor(Color.RED);
+        textView1.setTextColor(ContextCompat.getColor(this, R.color.wrong_red_color));
+        handler.postDelayed(r, DELAY_SEOCND);
+    }
+
 
     public void setTrueAction() {
         if (!isCount) {
@@ -305,6 +354,24 @@ public class LearnQuizActivity extends BaseActivity implements View.OnClickListe
         }
     }
 
+
+    public String getTranslatedString(String s) {
+        return Constant.getAllTranslatedDigit(s);
+    }
+
+    public void setOptionView() {
+        optionViewList.clear();
+        optionViewList.add(new TextModel(btn_op_1, card_1));
+        optionViewList.add(new TextModel(btn_op_2, card_2));
+        optionViewList.add(new TextModel(btn_op_3, card_3));
+        optionViewList.add(new TextModel(btn_op_4, card_4));
+
+
+        for (int i = 0; i < optionViewList.size(); i++) {
+            optionViewList.get(i).cardView.setCardBackgroundColor(Constant.getThemeColor(this, R.attr.theme_cell_color));
+            optionViewList.get(i).textView.setTextColor(Constant.getThemeColor(this, R.attr.theme_text_color));
+        }
+    }
 
     public void setData(int position) {
         textView1.setColor(Color.TRANSPARENT);

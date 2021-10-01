@@ -197,6 +197,20 @@ public class TrueFalseActivity extends BaseActivity implements View.OnClickListe
         card_2 = findViewById(R.id.card_2);
         btn_help_line = findViewById(R.id.btn_help_line);
 
+        btn_op_true = findViewById(R.id.btn_op_true);
+        btn_op_false = findViewById(R.id.btn_op_false);
+        arcLayout = findViewById(R.id.arc_layout);
+        progress_bar = findViewById(R.id.progress_bar);
+        tv_timer = findViewById(R.id.tv_timer);
+        menuLayout = findViewById(R.id.menu_layout);
+        btn_fifty = findViewById(R.id.btn_fifty);
+        btn_timer = findViewById(R.id.btn_timer);
+        btn_audiance = findViewById(R.id.btn_audiance);
+        audience_op_1 = findViewById(R.id.audience_op_1);
+        audience_op_2 = findViewById(R.id.audience_op_2);
+
+
+
         progress_bar.setMax(Constant.TIMER);
 
         tv_set.setText(getTranslatedString(getString(R.string.level) + ": " + subModel.level_no));
@@ -272,6 +286,18 @@ public class TrueFalseActivity extends BaseActivity implements View.OnClickListe
 
         checkAnswer = quizModel.answer;
         int answerPosition = 0;
+
+        audience_op_1.setVisibility(View.VISIBLE);
+        audience_op_2.setVisibility(View.VISIBLE);
+        for (int i = 0; i < optionViewList.size(); i++) {
+
+            if (checkAnswer.equals(optionViewList.get(i).string)) {
+                answerPosition = i;
+                break;
+            }
+        }
+        integerArrayList.clear();
+
 
         if (answerPosition == 0){
            audience_op_1.setText(getTranslatedString(random1 + " %"));
@@ -372,6 +398,19 @@ public class TrueFalseActivity extends BaseActivity implements View.OnClickListe
         intent = new Intent(this, LevelActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
+    }
+
+    public void cancelTimer() {
+        if (isTimer) {
+            countDownTimer.cancel();
+        }
+        if (handler != null) {
+            handler.removeCallbacks(r);
+        }
+
+        if (answerPlayer != null) {
+            answerPlayer.release();
+        }
     }
 
     @Override
@@ -515,6 +554,32 @@ public class TrueFalseActivity extends BaseActivity implements View.OnClickListe
     }
 
 
+    private void loadRewardedVideoAd() {
+        rewardedVideoAd.loadAd(getString(R.string.video_reward_ads),
+                new AdRequest.Builder().build());
+    }
+
+    public void setAddViews() {
+        rewardedVideoAd = MobileAds.getRewardedVideoAdInstance(this);
+        loadRewardedVideoAd();
+    }
+
+
+    public void setTrueAction(CardView textView) {
+        if (!isCount) {
+            isCount = true;
+            right_answer_count++;
+            addCoins();
+            setCoins();
+            score = score + plusScore;
+            tv_right_count.setText(getTranslatedString(String.valueOf(right_answer_count)));
+            setScore();
+        }
+        textView1.setColor(Color.TRANSPARENT);
+        textView.setCardBackgroundColor(Constant.getThemeColor(this, R.attr.colorPrimary));
+        textView1.setTextColor(ContextCompat.getColor(this, R.color.right_green_color));
+        handler.postDelayed(r, DELAY_SEOCND);
+    }
 
     final Runnable r = this::setNextData;
 
@@ -603,6 +668,15 @@ public class TrueFalseActivity extends BaseActivity implements View.OnClickListe
         optionViewList.clear();
         optionViewList.add(new TextModel(btn_op_true, card_1));
         optionViewList.add(new TextModel(btn_op_false, card_2));
+
+
+        for (int i = 0; i < optionViewList.size(); i++) {
+            optionViewList.get(i).cardView.setVisibility(View.VISIBLE);
+            optionViewList.get(i).cardView.setCardBackgroundColor(Constant.getThemeColor(this, R.attr.theme_cell_color));
+//            optionViewList.get(i).audienceView.setTextColor(Constant.getThemeColor(this, R.attr.theme_text_color));
+//            optionViewList.get(i).audienceView.setVisibility(View.GONE);
+        }
+
 
         optionViewList.get(0).cardView.setCardBackgroundColor(ContextCompat.getColor(this, R.color.right_green_color));
         optionViewList.get(1).cardView.setCardBackgroundColor(ContextCompat.getColor(this, R.color.wrong_red_color));
