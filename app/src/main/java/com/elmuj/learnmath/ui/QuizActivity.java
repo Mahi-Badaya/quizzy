@@ -1,3 +1,5 @@
+E:\GitHub\Hacktober\learnmaths\app\src\main\java\com\elmuj\learnmath\ui\QuizActivity.java
+
 package com.elmuj.learnmath.ui;
 
 import android.animation.Animator;
@@ -580,6 +582,97 @@ public class QuizActivity extends BaseActivity implements View.OnClickListener, 
         tv_right_count.setText(getTranslatedString(String.valueOf(right_answer_count)));
     }
 
+    public void setFalseAction(CardView textView) {
+
+        if (Constant.getVibrate(getApplicationContext())) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                vibe.vibrate(VibrationEffect.createOneShot(500, VibrationEffect.DEFAULT_AMPLITUDE));
+            } else {
+                vibe.vibrate(400);
+            }
+        }
+        if (!isCount) {
+            isCount = true;
+            wrong_answer_count++;
+            tv_wrong_count.setText(getTranslatedString(String.valueOf(wrong_answer_count)));
+            if ((score - 250) > 0) {
+                score = score - 250;
+            }
+            setScore();
+        }
+        helpLineCount++;
+        setHelpLineView();
+        textView.setCardBackgroundColor(Constant.getThemeColor(this, R.attr.colorPrimary));
+        textView1.setColor(Color.RED);
+        tv_factorial.setColor(Color.RED);
+        setColor(textView1, Color.RED);
+        setColor(textView2, Color.RED);
+        setColor(tv_factorial, Color.RED);
+
+        if (helpLineCount > 3) {
+            if (!isVideoComplete) {
+                cancelTimer();
+                ConstantDialog.showVideoDialogs(QuizActivity.this, QuizActivity.this);
+            } else {
+                passIntent();
+            }
+        } else {
+            handler.postDelayed(r, DELAY_SEOCND);
+        }
+
+
+    }
+
+    public void videoShow() {
+
+
+        rewardedVideoAd.show();
+
+
+        rewardedVideoAd.setRewardedVideoAdListener(new RewardedVideoAdListener() {
+            @Override
+            public void onRewardedVideoAdLoaded() {
+
+            }
+
+            @Override
+            public void onRewardedVideoAdOpened() {
+
+            }
+
+            @Override
+            public void onRewardedVideoStarted() {
+
+            }
+
+            @Override
+            public void onRewardedVideoAdClosed() {
+                passIntent();
+            }
+
+            @Override
+            public void onRewarded(RewardItem rewardItem) {
+                rewardedVideoAd.destroy(getApplicationContext());
+                ConstantDialog.showGetLivesDialogs(QuizActivity.this, QuizActivity.this);
+            }
+
+            @Override
+            public void onRewardedVideoAdLeftApplication() {
+
+            }
+
+            @Override
+            public void onRewardedVideoAdFailedToLoad(int i) {
+
+            }
+
+            @Override
+            public void onRewardedVideoCompleted() {
+            }
+        });
+
+
+    }
 
 
     @Override
@@ -714,9 +807,63 @@ public class QuizActivity extends BaseActivity implements View.OnClickListener, 
     }
 
 
+    public class GetAllData extends AsyncTask<Void, Void, String> {
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            progressDialog.setMessage(getString(R.string.please_wait));
+            progressDialog.show();
+
+        }
+
+        @Override
+        protected String doInBackground(Void... voids) {
+
+            RandomOptionData learnData = new RandomOptionData(QuizActivity.this, mainModel, subModel.level_no);
+
+            for (int i = 0; i < Constant.DEFAULT_QUESTION_SIZE; i++) {
+                QuizModel tableModel = learnData.getMethods();
+                Log.e("quizModel===", "" + tableModel.optionList.size());
+                quizModelList.add(tableModel);
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+
+            Log.e("quizModelList", "" + quizModelList.size());
+            progressDialog.dismiss();
+            tv_total_count.setText(getTranslatedString(getString(R.string.slash) + quizModelList.size()));
+            if (quizModelList.size() > 0) {
+                setData(position);
+            }
+        }
+
+    }
+
 
     public String getTranslatedString(String s) {
         return Constant.getAllTranslatedDigit(s);
+    }
+
+    public void setOptionView() {
+        optionViewList.clear();
+        optionViewList.add(new TextModel(btn_op_1, card_1, audience_op_1));
+        optionViewList.add(new TextModel(btn_op_2, card_2, audience_op_2));
+        optionViewList.add(new TextModel(btn_op_3, card_3, audience_op_3));
+        optionViewList.add(new TextModel(btn_op_4, card_4, audience_op_4));
+
+
+        for (int i = 0; i < optionViewList.size(); i++) {
+            optionViewList.get(i).cardView.setVisibility(View.VISIBLE);
+            optionViewList.get(i).cardView.setCardBackgroundColor(Constant.getThemeColor(this, R.attr.theme_cell_color));
+            optionViewList.get(i).textView.setTextColor(Constant.getThemeColor(this, R.attr.theme_text_color));
+            optionViewList.get(i).audienceView.setTextColor(Constant.getThemeColor(this, R.attr.theme_text_color));
+            optionViewList.get(i).audienceView.setVisibility(View.GONE);
+        }
     }
 
 

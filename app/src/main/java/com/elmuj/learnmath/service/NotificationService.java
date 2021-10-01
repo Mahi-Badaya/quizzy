@@ -1,3 +1,5 @@
+E:\GitHub\Hacktober\learnmaths\app\src\main\java\com\elmuj\learnmath\service\NotificationService.java
+
 package com.elmuj.learnmath.service;
 
 import android.app.Notification;
@@ -47,6 +49,35 @@ public class NotificationService extends Service {
             startForeground(1, new Notification());
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
+    private void startMyOwnForeground() {
+        String NOTIFICATION_CHANNEL_ID = "elmuj`  .permanence";
+        String channelName = "Background Service";
+        NotificationChannel chan = new NotificationChannel(NOTIFICATION_CHANNEL_ID, channelName, NotificationManager.IMPORTANCE_NONE);
+        chan.setLightColor(Color.BLUE);
+        chan.setLockscreenVisibility(Notification.VISIBILITY_PRIVATE);
+
+        NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        assert manager != null;
+        manager.createNotificationChannel(chan);
+
+        NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ID);
+        Notification notification = notificationBuilder.setOngoing(true)
+                .setContentTitle("App is running in background")
+                .setPriority(NotificationManager.IMPORTANCE_MIN)
+                .setCategory(Notification.CATEGORY_SERVICE)
+                .build();
+        startForeground(2, notification);
+    }
+
+
+    @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        super.onStartCommand(intent, flags, startId);
+        startTimer();
+        return START_STICKY;
+    }
+
     @Override
     public void onDestroy() {
         super.onDestroy();
@@ -67,6 +98,45 @@ public class NotificationService extends Service {
 
     private Timer timer;
     private TimerTask timerTask;
+
+    public void startTimer() {
+        timer = new Timer();
+        timerTask = new TimerTask() {
+            public void run() {
+                Log.i("Count", "=========  " + (counter++));
+
+                manager = DatabaseAccess.getInstance(getApplicationContext());
+                manager.open();
+                reminderModels = manager.getReminderData();
+                manager.close();
+                manager.open();
+                timeList = manager.getReminderTimeList();
+                manager.close();
+                Calendar calendarTime = Calendar.getInstance();
+                String currentTime = simpleDateFormat.format(calendarTime.getTime());
+
+                Log.e("receive111", "==true");
+                Gson gson = new Gson();
+                String currentday = new SimpleDateFormat("EE", Locale.ENGLISH).format(calendarTime.getTime());
+
+
+                if (Constant.getIsReminder(getApplicationContext())) {
+                    if (timeList.contains(currentTime)) {
+                        int i = timeList.indexOf(currentTime);
+                        if (reminderModels.get(i).ison.equals("1")) {
+                            ArrayList myList = new Gson().fromJson(reminderModels.get(i).repeat, ArrayList.class);
+                            if (myList.contains(currentday)) {
+                                NotificationScheduler.showReminderNotification(getApplicationContext(), currentTime);
+                            }
+                        }
+                    }
+                }
+
+            }
+        };
+        timer.schedule(timerTask, 1000, 60000);
+
+    }
 
 
     public void stoptimertask() {
