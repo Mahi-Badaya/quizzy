@@ -1,5 +1,3 @@
-E:\GitHub\Hacktober\learnmaths\app\src\main\java\com\elmuj\learnmath\ui\QuizActivity.java
-
 package com.elmuj.learnmath.ui;
 
 import android.animation.Animator;

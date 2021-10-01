@@ -1,5 +1,3 @@
-E:\GitHub\Hacktober\learnmaths\app\src\main\java\com\elmuj\learnmath\service\NotificationService.java
-
 package com.elmuj.learnmath.service;
 
 import android.app.Notification;
