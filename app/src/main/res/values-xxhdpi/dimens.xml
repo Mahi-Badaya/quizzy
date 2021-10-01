@@ -1,0 +1,63 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <!--    <dimen name="main_oval">50dp</dimen>-->
+    <dimen name="main_oval">75dp</dimen>
+<!--    <dimen name="main_oval">80dp</dimen>-->
+    <dimen name="quiz_size">90dp</dimen>
+    <dimen name="txt_size">30sp</dimen>
+    <dimen name="fraction_txt_size">25sp</dimen>
+    <dimen name="rem_text_size">8sp</dimen>
+    <dimen name="square_text_size">15sp</dimen>
+    <dimen name="flag_size">50sp</dimen>
+    <dimen name="btn_play_size">90dp</dimen>
+    <dimen name="number_margin_start">15dp</dimen>
+    <dimen name="dp_3">3dp</dimen>
+    <dimen name="padding_language">10dp</dimen>
+    <dimen name="number_cell">50dp</dimen>
+    <dimen name="number_margin">8dp</dimen>
+    <dimen name="number_count">3dp</dimen>
+    <dimen name="language_margin">5dp</dimen>
+    <dimen name="padding_language_margin">8dp</dimen>
+    <dimen name="top_margin">3dp</dimen>
+    <dimen name="padding_top">5dp</dimen>
+    <dimen name="play_btn_margin">10dp</dimen>
+    <dimen name="dp_5">5dp</dimen>
+    <dimen name="dp_8">8dp</dimen>
+    <dimen name="dp_10">10dp</dimen>
+    <dimen name="dp_15">15dp</dimen>
+    <dimen name="dp_20">20dp</dimen>
+    <dimen name="dp_30">30dp</dimen>
+    <dimen name="dp_40">40dp</dimen>
+    <dimen name="dp_50">50dp</dimen>
+    <dimen name="dp_70">70dp</dimen>
+    <dimen name="dp_90">90dp</dimen>
+    <dimen name="margin_top_feedback">35dp</dimen>
+    <dimen name="dp_120">120dp</dimen>
+    <dimen name="dp_150">150dp</dimen>
+
+
+    <dimen name="btn_size">160dp</dimen>
+    <dimen name="text_size">40sp</dimen>
+    <dimen name="dual_text_size">20sp</dimen>
+    <dimen name="weight">1</dimen>
+    <dimen name="image_size">40dp</dimen>
+    <dimen name="language_padding">1dp</dimen>
+    <dimen name="language_margin_top">1dp</dimen>
+    <dimen name="language_image_margin">10dp</dimen>
+    <dimen name="main_padding">10dp</dimen>
+    <dimen name="language_margin_bottom">8dp</dimen>
+    <dimen name="number_margin_top">10dp</dimen>
+    <dimen name="sub_view_cell">35dp</dimen>
+    <dimen name="table_margin">10dp</dimen>
+    <dimen name="dialog_text_size">21dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_top_quiz">10dp</dimen>
+    <dimen name="margin_top_10">10dp</dimen>
+
+
+</resources>

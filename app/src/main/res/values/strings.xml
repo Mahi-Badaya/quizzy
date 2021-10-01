@@ -1,0 +1,334 @@
+<resources>
+    <string name="app_name">Learn Maths</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">elmuj@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu_home">DashBoard</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="rem">rem</string>
+    <string name="no_internet">Internet connection not available</string>
+    <string name="str_video_error">video not loaded.please check network..</string>
+    <string name="coins_error">coins not available</string>
+    <string name="decimal">Decimal</string>
+    <string name="fraction">Fraction</string>
+    <string name="integer">Integer</string>
+    <string name="addition">Addition</string>
+    <string name="mixed">Mixed</string>
+    <string name="percentage">Percentage</string>
+    <string name="square">Square</string>
+    <string name="square_root">Square Root</string>
+    <string name="cube_root">Cube Root</string>
+    <string name="cube">Cube</string>
+    <string name="subtraction">Subtraction</string>
+    <string name="division">Division</string>
+    <string name="multiplication">Multiplication</string>
+    <string name="practice_set">Practice Set</string>
+    <string name="ex_">Ex.:</string>
+    <string name="set">Set</string>
+    <string name="question">Question:</string>
+    <string name="str_question">Question</string>
+    <string name="please_wait">Please wait..</string>
+    <string name="str_please_wait" translatable="false">Please wait..</string>
+    <string name="wrong_answer">Wrong Answer</string>
+    <string name="unanswer">UnAnswer</string>
+    <string name="create_pdf">Create PDF</string>
+    <string name="send_to">Send mail…</string>
+    <string name="find_missing">Find Missing</string>
+    <string name="coins">Coins :</string>
+    <string name="view_answer">Review Answer</string>
+    <string name="view_answer_coin">Use 10 coins</string>
+    <string name="show_video">Watch Video ads</string>
+    <string name="questions">Questions :</string>
+    <string name="answer">Answer</string>
+    <string name="your_answer">Your answer</string>
+    <string name="str_of">\u0020of\u0020</string>
+    <string name="history">History</string>
+    <string name="quiz">quiz</string>
+    <string name="total_set">Total set</string>
+    <string name="total_question">Total question</string>
+    <string name="ex">Ex:</string>
+    <string name="score">Score:</string>
+    <string name="retry">Retry</string>
+    <string name="next">Next</string>
+    <string name="home">Home</string>
+    <string name="best_score">Best Score:</string>
+    <string name="no">No.</string>
+    <string name="feedback">Feedback</string>
+    <string name="rate_us">Rate us</string>
+    <string name="send_email">Send Email</string>
+    <string name="share_link">Share Link!</string>
+    <string name="save_pdf" translatable="false">Save Pdf..</string>
+    <string name="language">Language</string>
+    <string name="worksheet_generate">Worksheet Generate</string>
+    <string name="str_worksheet_generate" translatable="false">Worksheet Generate</string>
+    <string name="school_name" translatable="false">School Name</string>
+    <string name="school_name_hint" translatable="false">School Name*</string>
+    <string name="number_of_question" translatable="false">Number of Question</string>
+    <string name="number_of_question_hint" translatable="false">Number of Question*</string>
+    <string name="operation_type" translatable="false">Operation Type</string>
+    <string name="submit" translatable="false">Submit</string>
+    <string name="without_answer" translatable="false">Without Answer</string>
+    <string name="with_answer" translatable="false">With Answer</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="operation" translatable="false">Operation</string>
+    <string name="without_carry" translatable="false">Without Carry</string>
+    <string name="with_carry" translatable="false">With Carry</string>
+    <string name="with_borrow" translatable="false">With Borrow</string>
+    <string name="without_borrow" translatable="false">Without borrow</string>
+    <string name="without_remainder" translatable="false">Without remainder</string>
+    <string name="with_remainder" translatable="false">With remainder</string>
+    <string name="str_multiplication_set" translatable="false">Multiplication Set</string>
+    <string name="str_addition_set">Addition Set</string>
+    <string name="str_subtraction_set">Subtraction Set</string>
+    <string name="str_division_set">Division Set</string>
+    <string name="empty_error">Please enter value..</string>
+    <string name="str_empty_error" translatable="false">Please enter value..</string>
+    <string name="question_paper">Question Paper</string>
+    <string name="studentName">Student Name :</string>
+    <string name="daily_test">Daily Test</string>
+    <string name="take_test">Take test</string>
+    <string name="test_done">Test Done !!</string>
+    <string name="done">Done</string>
+    <string name="mon">Mon</string>
+    <string name="tue">Tue</string>
+    <string name="wed">Wed</string>
+    <string name="thu">Thu</string>
+    <string name="fri">Fri</string>
+    <string name="sat">Sat</string>
+    <string name="sun">Sun</string>
+
+
+    <string name="level_complete">Complete</string>
+    <string name="level">Level</string>
+    <string name="sunday">Sunday</string>
+    <string name="monday">Monday</string>
+    <string name="repeat">Repeat</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="days">Sun,Mon,Tue,Wed,Thu,Fri,Sat</string>
+    <string name="reminder">Reminder</string>
+    <string name="mathry_reminder">Mathry Reminder</string>
+    <string name="teacher_name">Teacher Name</string>
+    <string name="teacher_name_hint" translatable="false">Teacher Name*</string>
+    <string name="date">Date :</string>
+    <string name="type_of_question">Type of Question</string>
+    <string name="marks">Marks :</string>
+    <string name="page">Page</string>
+    <string name="str_answer">Answer:</string>
+
+    <string name="no_data" translatable="false">No Data</string>
+    <string name="show_worksheet" translatable="false">Show Worksheet</string>
+    <string name="test_already_done">Test already done !</string>
+    <string name="clear_previous_level">clear previous level..</string>
+    <string name="sound">Sound</string>
+    <string name="on">On</string>
+    <string name="off">Off</string>
+    <string name="way_of_learning">Way of Learning</string>
+    <string name="multi_operation">Multi Operations</string>
+    <string name="pdf_error">No application found which can open the file</string>
+    <string name="str_enter_valid_number" translatable="false">Enter valid number…</string>
+    <string name="enter_valid_number">Enter valid number…</string>
+    <string name="no_app_found">No  application found which can open the file</string>
+    <string name="link" translatable="false">Link</string>
+    <string name="select_logo_from_gallery" translatable="false">Select Logo from gallery*</string>
+    <string name="link_hint" translatable="false">Link*</string>
+    <string name="please_select_logo" translatable="false">Please select logo..</string>
+    <string name="auto_fill" translatable="false">Auto fill</string>
+    <string name="choose_image" translatable="false">Choose Image</string>
+    <string name="delete_file">Delete file</string>
+    <string name="select_all">Select all</string>
+    <string name="empty_feedback">Please Enter your Feedback</string>
+    <string name="feedback_hint">Tell us where we can improve?</string>
+    <string name="rate_experience">Rate Your Experience</string>
+    <string name="rate_msg">if you enjoy using app \n would you mind ratting us,then…?</string>
+    <string name="no_thanks">No, Thanks</string>
+    <string name="rating_error">Please select rate</string>
+    <string name="rate_your_experience">Rate Your Experience</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="communicate">Communicate</string>
+    <string name="congratulations">Congratulations !!</string>
+    <string name="you_ve_got_10_coins">You\'ve got 10 coins.</string>
+    <string name="share_image">Share Image</string>
+    <string name="night_mode">Night Mode</string>
+    <string name="color">Color</string>
+    <string name="choose_the_color">Choose the color</string>
+    <string name="exit_message">Are you sure want to exit?</string>
+    <string name="yes">Yes</string>
+    <string name="text_no">No</string>
+    <string name="text_game_over">Game Over !</string>
+    <string name="text_show_video">Get 1 lives for continue game.</string>
+    <string name="button_text_show_video">Show Video</string>
+    <string name="game_over">Game Over</string>
+    <string name="got_lives_message">You have got 1 lives..</string>
+    <string name="info_message">Support english langauge.</string>
+    <string name="str_info_message" translatable="false">Support english langauge.</string>
+    <string name="info">Info !</string>
+    <string name="str_info" translatable="false">Info !</string>
+    <string name="share_result">Share Result</string>
+    <string name="review_test">Review Test</string>
+    <string name="daily_reminder">Daily Reminder</string>
+
+
+    <string name="hindi" translatable="false">Hindi</string>
+    <string name="english" translatable="false">English</string>
+    <string name="spanish" translatable="false">Spanish</string>
+    <string name="arabic" translatable="false">Arabic</string>
+    <string name="malay" translatable="false">Malay</string>
+    <string name="russian" translatable="false">Russian</string>
+    <string name="french" translatable="false">French</string>
+    <string name="mandarin_chinese" translatable="false">Mandarin Chinese</string>
+    <string name="marathi" translatable="false">Marathi</string>
+    <string name="gujrati" translatable="false">Gujarati</string>
+
+
+    <!--    Language Code-->
+
+    <string name="en_code" translatable="false">en</string>
+    <string name="fr_code" translatable="false">fr</string>
+    <string name="es_code" translatable="false">es</string>
+    <string name="ar_code" translatable="false">ar</string>
+    <string name="ru_code" translatable="false">ru</string>
+    <string name="ms_code" translatable="false">ms</string>
+    <string name="zh_code" translatable="false">zh</string>
+    <string name="hi_code" translatable="false">hi</string>
+    <string name="mr_code" translatable="false">mr</string>
+    <string name="gu_code" translatable="false">gu</string>
+
+    <string name="slash" translatable="false">/</string>
+
+    <string name="feedback_mail" translatable="false">templatevilla007@gmail.com</string>
+
+
+
+
+    <string name="privacy_policy_link" translatable="false">http://www.google.co.uk/</string>
+
+
+    <string name="str_space" translatable="false">\u0020\u0020</string>
+    <string name="watermark_text" translatable="false">WaterMark Text</string>
+    <string name="watermark_text_hint" translatable="false">WaterMark Text*</string>
+    <string name="pdf" translatable="false">Pdf</string>
+    <string name="pdf_generate" translatable="false">Pdf Generated</string>
+    <string name="select_operation_type" translatable="false">Select operation type</string>
+    <string name="please_select_type" translatable="false">Please select type…</string>
+    <string name="fill_details" translatable="false">Please fill details....</string>
+    <string name="select_operation" translatable="false">Select Operation</string>
+    <string name="operation_selected" translatable="false">Operation Selected</string>
+    <string name="operation_selected_hint" translatable="false">Operation Selected*</string>
+    <string name="select_number_types" translatable="false">Select Number Types</string>
+    <string name="number_type_selected" translatable="false">Number Type Selected</string>
+    <string name="select_question_type" translatable="false">Select Question Type</string>
+    <string name="question_type_selected" translatable="false">Question Type Selected</string>
+    <string name="select_question_category" translatable="false">Select Question Category</string>
+    <string name="question_category_selected" translatable="false">Question category selected</string>
+    <string name="space" translatable="false">\u0020</string>
+    <string name="single_space" translatable="false">\u0020</string>
+    <string name="str_multi_sign" translatable="false">x</string>
+    <string name="sign_equal1" translatable="false">\u0020=\u0020</string>
+    <string name="addition_sign" translatable="false">+</string>
+    <string name="multiplication_sign" translatable="false">x</string>
+    <string name="subtraction_sign" translatable="false">-</string>
+    <string name="division_sign" translatable="false">/</string>
+    <string name="addition_table" translatable="false">addition_table</string>
+    <string name="subtraction_table" translatable="false">subtraction_table</string>
+    <string name="multiplication_table" translatable="false">multiplication_table</string>
+    <string name="division_table" translatable="false">division_table</string>
+    <string name="square_table" translatable="false">square_table</string>
+    <string name="square_root_table" translatable="false">square_root_table</string>
+    <string name="cube_table" translatable="false">cube_table</string>
+    <string name="cube_root_table" translatable="false">cube_root_table</string>
+    <string name="factorial_table" translatable="false">factorial_table</string>
+    <string name="mixed_table" translatable="false">mixed_table</string>
+    <string name="addition_subtraction_table" translatable="false">addition_subtraction_table</string>
+    <string name="complicated_multiplication_table" translatable="false">complicated_multiplication_table</string>
+    <string name="complicated_division_table" translatable="false">complicated_division_table</string>
+
+
+    <string name="ADS_VISIBILITY" translatable="false">NO</string>
+    <string name="app_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="banner_ads" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="admob_interstitial_id" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="video_reward_ads" translatable="false">ca-app-pub-3940256099942544/5224354917</string>
+
+
+    <string name="learn_table_type" translatable="false">learn_table_type</string>
+    <string name="option_type" translatable="false">option_type</string>
+    <string name="input_type" translatable="false">input_type</string>
+    <string name="true_false_type" translatable="false">true_false_type</string>
+    <string name="find_missing_type" translatable="false">find_missing_type</string>
+    <string name="duel_type" translatable="false">duel_type</string>
+    <string name="square_sign" translatable="false">²</string>
+    <string name="cube_sign" translatable="false">³</string>
+    <string name="root_sign" translatable="false">√</string>
+    <string name="factorial_sign" translatable="false">!</string>
+
+
+    <string name="factorial">Factorial</string>
+    <string name="addition_subtraction">Addition/Subtraction</string>
+    <string name="complicated_multiplication">Complicated Multiplication</string>
+    <string name="complicated_division">Complicated Division</string>
+    <string name="learn_table">Learn Table</string>
+    <string name="option">Option</string>
+    <string name="input">Input</string>
+    <string name="true_false">True/False</string>
+
+    <string name="duel">Duel</string>
+    <string name="practice">Practice</string>
+    <string name="complete">Complete !</string>
+
+    <string name="_1" translatable="false">1</string>
+    <string name="_2" translatable="false">2</string>
+    <string name="_3" translatable="false">3</string>
+    <string name="_4" translatable="false">4</string>
+    <string name="_5" translatable="false">5</string>
+    <string name="x" translatable="false">⌫</string>
+    <string name="_C" translatable="false">C</string>
+    <string name="decimal_point" translatable="false">.</string>
+    <string name="precision" translatable="false">±</string>
+    <string name="_6" translatable="false">6</string>
+    <string name="_7" translatable="false">7</string>
+    <string name="_0" translatable="false">0</string>
+    <string name="_8" translatable="false">8</string>
+    <string name="_9" translatable="false">9</string>
+    <string name="text_true" translatable="false">✓</string>
+    <string name="text_false" translatable="false">x</string>
+    <string name="str_true" translatable="false">true</string>
+    <string name="str_false" translatable="false">false</string>
+    <string name="hint">Hint !</string>
+    <string name="answer_is">Answer is</string>
+    <string name="total_level">Total Level</string>
+    <string name="high_score">High score :</string>
+    <string name="you_won">You Won</string>
+    <string name="you_lose">You Lose</string>
+    <string name="try_next_time">Try hard next time!</string>
+    <string name="mode">Mode</string>
+    <string name="select_difficulty">Select Difficulty</string>
+    <string name="easy">Easy</string>
+    <string name="medium">Medium</string>
+    <string name="hard">Hard</string>
+    <string name="default_reminder_text" translatable="false">09:00 PM</string>
+
+
+
+
+
+    <string name="it_s_draw">It\'s a Draw</string>
+    <string name="vibrate">Vibrate</string>
+    <string name="quit">Quit !</string>
+    <string name="exit_quiz">Are you sure you want to quiz?</string>
+    <string name="life_line_toast">life line use only 1 time..</string>
+
+
+</resources>

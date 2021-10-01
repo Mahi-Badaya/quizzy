@@ -1,0 +1,305 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">?attr/colorPrimary</item>
+        <item name="colorPrimaryDark">?attr/colorPrimaryDark</item>
+        <item name="colorAccent">?attr/colorAccent</item>
+        <item name="android:windowContentOverlay">@null</item>
+
+    </style>
+
+    <style name="Item" parent="">
+        <item name="android:textColor">?attr/theme_text_color</item>
+    </style>
+
+
+    <style name="Item.Path">
+        <item name="android:layout_width">@dimen/item_circle_size_path</item>
+        <item name="android:layout_height">@dimen/item_circle_size_path</item>
+    </style>
+
+    <style name="DeleteAlarmDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">?attr/colorAccent</item>
+    </style>
+
+
+
+
+    <style name="KeyboardTextStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">?attr/theme_text_color</item>
+        <item name="android:textSize">25sp</item>
+        <item name="backgroundColor">?attr/theme_cell_color</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:background">@drawable/rect_btn_bg</item>
+        <!--        <item name="background">@drawable/rect_btn_bg</item>-->
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+    <style name="KeyboardTextStyleGreenBg" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">#3ADD40</item>
+        <item name="android:textSize">25sp</item>
+        <item name="backgroundColor">?attr/theme_cell_color</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:background">@drawable/rect_btn_bg_green</item>
+        <!--        <item name="background">@drawable/rect_btn_bg</item>-->
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+    <style name="KeyboardTextStyleRedBg" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">#F44040</item>
+        <item name="android:textSize">25sp</item>
+        <item name="backgroundColor">?attr/theme_cell_color</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:background">@drawable/rect_btn_bg_red</item>
+        <!--        <item name="background">@drawable/rect_btn_bg</item>-->
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+
+    <style name="DarkFullScreenWindow" parent="@style/PrimaryTheme">
+
+        <!--        <item name="colorAccent">@color/colorAccent</item>-->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@color/dark_mode_color</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <!--        <item name="colorPrimary">?attr/colorPrimary</item>-->
+        <!--        <item name="colorPrimaryDark">?attr/colorPrimaryDark</item>-->
+        <!--        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+        <!--        <item name="colorPrimary">@color/colorPrimary</item>-->
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="navigationIcon">@drawable/ic_keyboard_backspace_black_24dp</item>
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="android:fontFamily">@font/myriadpro_regular</item>
+        <item name="background">@color/dark_mode_color</item>
+        <item name="expandedTitleGravity">center</item>
+        <item name="theme_oval_color">@color/dark_mode_oval</item>
+        <item name="theme_text_color">@color/white</item>
+        <item name="theme_cell_color">@color/dark_cell_color</item>
+        <item name="android:colorBackground">@color/dark_mode_color</item>
+        <item name="view_color">@color/dark_view_color</item>
+        <item name="feedback_icon">@drawable/shape_dark</item>
+        <item name="tabBackGround">@drawable/selector_product_image</item>
+        <!--        <item name="android:timePickerDialogTheme">@style/AppTheme.Dialog</item>-->
+    </style>
+
+    <style name="LightFullScreenWindow" parent="@style/PrimaryTheme">
+        <!--        <item name="colorAccent">@color/colorAccent</item>-->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">?attr/theme_card_color</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <!--        <item name="colorPrimary">?attr/colorPrimary</item>-->
+        <!--        <item name="colorPrimaryDark">?attr/colorPrimaryDark</item>-->
+        <!--        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+        <!--        <item name="colorPrimary">@color/colorPrimary</item>-->
+        <item name="android:textColorPrimary">@color/dark_mode_color</item>
+        <item name="navigationIcon">@drawable/ic_keyboard_backspace_dark_mode</item>
+        <item name="android:textColorSecondary">@color/dark_mode_color</item>
+        <item name="android:fontFamily">@font/myriadpro_regular</item>
+        <item name="background">?attr/theme_card_color</item>
+<!--        <item name="background">@color/light_mode_color</item>-->
+        <item name="expandedTitleGravity">center</item>
+        <item name="theme_oval_color">@color/light_mode_oval</item>
+        <item name="theme_text_color">@color/dark_mode_color</item>
+        <item name="theme_cell_color">@color/white</item>
+        <item name="android:colorBackground">@color/white</item>
+        <item name="view_color">@color/light_view_color</item>
+        <item name="feedback_icon">@drawable/shape_7</item>
+        <item name="tabBackGround">@drawable/selector_product_light</item>
+        <!--        <item name="android:timePickerDialogTheme">@style/AppTheme.Dialog</item>-->
+
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+
+    <style name="PrimaryTheme">
+        <item name="colorPrimary">@color/colorPrimary</item>
+
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="theme_card_color">@color/primaryCardColor</item>
+    </style>
+
+
+
+
+    <style name="FullScreenWindow" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="colorPrimary">?attr/colorPrimary</item>
+        <item name="colorPrimaryDark">?attr/colorPrimaryDark</item>
+    </style>
+
+
+    <style name="DeepPurplePrimaryTheme">
+        <item name="colorPrimary">@color/deepPurpleColorPrimary</item>
+        <item name="colorPrimaryDark">@color/deepPurpleColorPrimaryDark</item>
+        <item name="colorAccent">@color/deepPurpleColorPrimary</item>
+        <item name="theme_card_color">@color/deepPurpleCardColor</item>
+    </style>
+
+    <style name="BluePrimaryTheme">
+        <item name="colorPrimary">@color/blueColorPrimary</item>
+        <item name="colorPrimaryDark">@color/blueColorPrimaryDark</item>
+        <item name="colorAccent">@color/blueColorPrimary</item>
+        <item name="theme_card_color">@color/blueCardColor</item>
+    </style>
+
+    <style name="PinkPrimaryTheme">
+        <item name="colorPrimary">@color/pinkColorPrimary</item>
+        <item name="colorPrimaryDark">@color/pinkColorPrimaryDark</item>
+        <item name="colorAccent">@color/pinkColorPrimary</item>
+        <item name="theme_card_color">@color/pinkCardColor</item>
+    </style>
+
+    <style name="OrangePrimaryTheme">
+        <item name="colorPrimary">@color/orangeColorPrimary</item>
+        <item name="colorPrimaryDark">@color/orangeColorPrimaryDark</item>
+        <item name="colorAccent">@color/orangeColorPrimary</item>
+        <item name="theme_card_color">@color/orangeCardColor</item>
+    </style>
+
+    <style name="GreenPrimaryTheme">
+        <item name="colorPrimary">@color/greenColorPrimary</item>
+        <item name="colorPrimaryDark">@color/greenColorPrimaryDark</item>
+        <item name="colorAccent">@color/greenColorPrimary</item>
+        <item name="theme_card_color">@color/greenCardColor</item>
+    </style>
+
+    <style name="GrayPrimaryTheme">
+        <item name="colorPrimary">@color/grayColorPrimary</item>
+        <item name="colorPrimaryDark">@color/grayColorPrimaryDark</item>
+        <item name="colorAccent">@color/grayColorPrimary</item>
+        <item name="theme_card_color">@color/grayCardColor</item>
+    </style>
+
+
+    <style name="PrimaryColorBlue">
+        <item name="colorPrimary">#03A9F3</item>
+        <item name="colorPrimaryDark">#03A9F3</item>
+    </style>
+
+
+    <style name="CustomDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!--buttons color-->
+        <item name="colorAccent">@android:color/white</item>
+        <!--title and message color-->
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <!--dialog background-->
+        <item name="android:windowBackground">@drawable/dialog_coin</item>
+    </style>
+
+
+    <style name="ToolbarStyle" parent="Widget.AppCompat.ActionBar">
+
+        <item name="android:textColorPrimary">@color/dark_mode_color</item>
+        <item name="navigationIcon">@drawable/ic_keyboard_backspace_dark_mode</item>
+        <item name="android:textColorSecondary">@color/dark_mode_color</item>
+        <item name="android:fontFamily">@font/myriadpro_regular</item>
+        <item name="background">@color/light_mode_color</item>
+    </style>
+
+    <style name="NightToolbarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="navigationIcon">@drawable/ic_keyboard_backspace_black_24dp</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+        <item name="android:fontFamily">@font/myriadpro_regular</item>
+        <item name="background">@color/dark_mode_color</item>
+    </style>
+
+
+    <style name="DialogCustomTheme" parent="android:Theme.Holo.Dialog.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+
+    <style name="CalenderViewCustom" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@android:color/holo_orange_dark</item>
+        <item name="colorPrimary">@android:color/darker_gray</item>
+        <item name="android:fontFamily">@font/myriadpro_bold</item>
+        <item name="android:textColorPrimary">?attr/theme_text_color</item>
+        <item name="android:textColor">?attr/theme_text_color</item>
+    </style>
+
+    <style name="CalenderViewDateCustomText" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">?attr/theme_text_color</item>
+        <item name="android:textColorPrimaryInverse">@color/red</item>
+        <item name="android:fontFamily">@font/myriadpro_regular</item>
+    </style>
+
+
+    <style name="date_picker_theme" parent="@android:style/Widget.DatePicker">
+        <item name="colorPrimary">?attr/colorPrimary</item>
+
+
+        <!-- colorPrimaryDark is used for the status bar -->
+        <item name="colorPrimaryDark">?attr/colorPrimaryDark</item>
+
+        <!-- colorAccent is used as the default value for colorControlActivated
+             which is used to tint widgets -->
+        <item name="colorAccent">?attr/colorPrimary</item>
+    </style>
+
+    <style name="CalenderViewWeekCustomText" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">?attr/theme_text_color</item>
+        <item name="android:fontFamily">@font/myriadpro_bold</item>
+    </style>
+
+    <style name="DialogAnimationTheme">
+        <item name="android:windowEnterAnimation">@anim/anim_scale_in</item>
+        <item name="android:windowExitAnimation">@anim/anim_scale_out</item>
+    </style>
+
+
+    <style name="MyRatingBarTwo" parent="Widget.AppCompat.RatingBar">
+        <item name="android:progressDrawable">@drawable/rating_bar_bg</item>
+        <item name="colorControlNormal">@android:color/white</item>
+        <item name="colorControlActivated">?attr/colorPrimary</item>
+        <item name="android:minHeight">35dp</item>
+        <item name="android:maxHeight">35dp</item>
+
+    </style>
+
+    <style name="MyAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:textColorPrimary">?attr/theme_text_color</item>
+        <item name="android:background">?attr/theme_cell_color</item>
+
+
+    </style>
+
+    <style name="TimePickerDialogStyle" parent="Theme.AppCompat.DayNight.Dialog.Alert">
+        <item name="android:textColorPrimary">@color/black</item>
+
+
+    </style>
+
+
+</resources>

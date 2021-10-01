@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/language_margin"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/cell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_8"
+        android:background="@drawable/language_select"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_language">
+
+        <ImageView
+            android:id="@+id/img_flag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingStart="@dimen/padding_language_start"
+            android:paddingEnd="@dimen/padding_language_start" />
+
+        <TextView
+            android:id="@+id/txt_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/padding_top"
+            android:fontFamily="@font/myriadpro_bold"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="@string/english"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@android:color/black" />
+
+    </LinearLayout>
+
+
+    <!--    <View-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="1dp"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:visibility="gone"-->
+    <!--        android:background="#BDBDBD" />-->
+
+</RelativeLayout>
