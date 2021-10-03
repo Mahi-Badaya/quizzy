@@ -48,6 +48,40 @@ public class ActivitySetting extends AppCompatActivity {
     }
 
 
+    private void init() {
+
+        CenteredToolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle(null);
+        toolbar.setNavigationOnClickListener(view -> backIntent());
+
+        getSupportActionBar().setTitle(getString(R.string.action_settings));
+
+
+        image_mode = findViewById(R.id.image_mode);
+        image_sound = findViewById(R.id.image_sound);
+        image_vibrate = findViewById(R.id.image_vibrate);
+        image_reminder = findViewById(R.id.image_reminder);
+        btn_privacy_policy = findViewById(R.id.btn_privacy_policy);
+        btn_share = findViewById(R.id.btn_share);
+        btn_rate = findViewById(R.id.btn_rate);
+        image_color = findViewById(R.id.image_color);
+        btn_feedback = findViewById(R.id.btn_feedback);
+        btn_color = findViewById(R.id.btn_color);
+
+
+        setClick();
+        image_color.setBackground(Constant.customViewOval(ContextCompat.getColor(this, Constant.getThemeList().get(Constant.getThemePosition(ActivitySetting.this)))));
+
+        setOnOffVibrate();
+        setOnOffSound();
+        setThemeMode();
+        setReminder();
+    }
+
     public void refreshAcitivity() {
         Intent intent = new Intent(this, ActivitySetting.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
@@ -55,6 +89,75 @@ public class ActivitySetting extends AppCompatActivity {
         overridePendingTransition(0, 0);
     }
 
+    private void setClick() {
+        image_mode.setOnClickListener(v -> {
+
+            Constant.setNightMode(getApplicationContext(), !Constant.getNightMode(getApplicationContext()));
+            setThemeMode();
+            refreshAcitivity();
+        });
+
+        image_sound.setOnClickListener(v -> {
+            Constant.setSound(getApplicationContext(), !Constant.getSound(getApplicationContext()));
+            setOnOffSound();
+        });
+
+        image_vibrate.setOnClickListener(v -> {
+            Constant.setVibrate(getApplicationContext(), !Constant.getVibrate(getApplicationContext()));
+            setOnOffVibrate();
+        });
+
+        image_reminder.setOnClickListener(v -> {
+            Constant.setIsReminder(getApplicationContext(), !Constant.getIsReminder(getApplicationContext()));
+            setReminder();
+        });
+
+        btn_feedback.setOnClickListener(v -> {
+            showFeedbackDialog(this);
+        });
+        btn_rate.setOnClickListener(v -> {
+            showRatingDialog(this);
+        });
+        btn_share.setOnClickListener(v -> {
+            Constant.share(this);
+        });
+
+        btn_privacy_policy.setOnClickListener(v -> {
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.privacy_policy_link)));
+            startActivity(browserIntent);
+        });
+
+        btn_color.setOnClickListener(v -> showColorThemeDialog());
+
+    }
+
+
+    public void setOnOffSound() {
+        if (Constant.getSound(getApplicationContext())) {
+            image_sound.setBackgroundResource(R.drawable.ic_toggle_on);
+        } else {
+            image_sound.setBackgroundResource(R.drawable.ic_toggle_off);
+        }
+
+    }
+
+    public void setOnOffVibrate() {
+        if (Constant.getVibrate(getApplicationContext())) {
+            image_vibrate.setBackgroundResource(R.drawable.ic_toggle_on);
+        } else {
+            image_vibrate.setBackgroundResource(R.drawable.ic_toggle_off);
+        }
+
+    }
+
+    public void setThemeMode() {
+        if (Constant.getNightMode(getApplicationContext())) {
+            image_mode.setBackgroundResource(R.drawable.ic_toggle_on);
+        } else {
+            image_mode.setBackgroundResource(R.drawable.ic_toggle_off);
+        }
+
+    }
 
     public void setReminder() {
         if (Constant.getIsReminder(getApplicationContext())) {
